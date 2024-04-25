@@ -246,7 +246,8 @@ test(model, test_data)
 #we create a dummy if the subject probability to choose an option is higher than the group probability
 #We will also compare if the subject probability to choose an option is consistent with the probability of the group
 #it is consitent if the difference between both probabilities is less than 25%
-porsiacaso=raw_data 
+#See extra_var.R to see the creation of these new variables, the output of the code is attention_var.csv
+#porsiacaso=raw_data 
 extra = CSV.read("attention_var.csv", DataFrame)
 extra = extra[:, 2:end] 
 raw_data = hcat(raw_data, extra)
